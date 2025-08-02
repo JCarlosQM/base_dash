@@ -30,6 +30,22 @@
           </ul>
         </li>
 
+        <!-- Nombre del usuario logueado -->
+        @php
+            $usuario = session('usuario');
+        @endphp
+
+        @if ($usuario)
+            <li class="nav-item nav-link">
+                Hola, {{ $usuario['nombre'] ?? 'Usuario' }}
+            </li>
+        @else
+            <li class="nav-item nav-link text-white">
+                Invitado
+            </li>
+        @endif
+
+
         <!-- Link para cerrar sesión -->
         <li class="nav-item">
           <a class="nav-link" href="/logout">Cerrar sesión</a>

@@ -47,7 +47,7 @@ body.theme-blue {
     --green-calid-active: #0a58ca;
     --green-calid-disabled: #a3c9f5;
 
-    --dark-general: #0d3b66;
+    --dark-general: #c7e3fc;
     --dark-disabled: #457b9d;
 
     --text-color: #0a1f44;
@@ -147,3 +147,68 @@ a, button, .sidebar-link, .nav-link, .dropdown-toggle {
     transition: all 0.2s ease-in-out;
 }
 
+.modal-content {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-content .form-label {
+    color: var(--text-color) !important;
+}
+
+.modal-content .form-control {
+    background-color: var(--dark-general); /* o var(--bg-color) si quieres */
+    color: var(--text-color);
+    border: 1px solid var(--dark-disabled);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Cuando el input está enfocado */
+.modal-content .form-control:focus {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--green-calid);
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+    outline: none;
+}
+
+/* Botones */
+.modal-content .btn-success {
+    background-color: var(--green-calid);
+    border-color: var(--green-calid);
+    color: var(--hover-text-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.modal-content .btn-success:hover {
+    background-color: var(--green-calid-hover);
+    border-color: var(--green-calid-hover);
+    color: var(--hover-text-color);
+}
+
+.modal-content .btn-secondary {
+    background-color: var(--dark-disabled);
+    border-color: var(--dark-disabled);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.modal-content .btn-secondary:hover {
+    background-color: var(--dark-general);
+    border-color: var(--dark-general);
+    color: var(--text-color);
+}
+
+
+
+/* tablas  */
+
+table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
